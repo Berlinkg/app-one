@@ -27,9 +27,9 @@ class Welcom extends StatelessWidget {
             ],
           ),
           const Positioned(
-            child: Text('WIDGET'),
+            child: Text(''),
             bottom: 20,
-            left: 20,
+            left: 25,
           )
         ],
       ),
