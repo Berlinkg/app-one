@@ -2,22 +2,22 @@
 
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shop_app_2/pages/welcom/widgets.dart';
 
-class Welcom extends StatefulWidget {
+final indexProvider = StateProvider((ref) => 0);
+
+class Welcom extends ConsumerWidget {
   Welcom({super.key});
 
-  @override
-  State<Welcom> createState() => _WelcomState();
-}
-
-class _WelcomState extends State<Welcom> {
   final PageController _controller = PageController();
 
   int dotsIndex = 0;
+
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     print('my dots index $dotsIndex');
+    final index = ref.watch(indexProvider);
     return Container(
       color: Colors.white,
       child: SafeArea(
@@ -31,9 +31,11 @@ class _WelcomState extends State<Welcom> {
               PageView(
                 onPageChanged: (value) {
                   print('your index is index $dotsIndex');
-                  setState(() {
-                    dotsIndex = value;
-                  });
+                  dotsIndex = value;
+                  ref.read(indexProvider.notifier).state = value;
+                  // setState(() {
+                  //   dotsIndex = value;
+                  // });
                 },
                 controller: _controller,
                 scrollDirection: Axis.horizontal,
@@ -59,6 +61,7 @@ class _WelcomState extends State<Welcom> {
               Positioned(
                 bottom: 20,
                 child: DotsIndicator(
+                  position: index,
                   dotsCount: 3,
                   mainAxisAlignment: MainAxisAlignment.center,
                   decorator: DotsDecorator(
