@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app_2/common/widgets/app_shadou.dart';
 import 'package:shop_app_2/common/widgets/text_widgets.dart';
+// import 'package:shop_app_2/pages/sing/sinng_in.dart';
 
-Widget appOnboardingPage(PageController controller,
-    {String imagPath = 'assets/images/1.png',
-    String title = '',
-    String subttile = '',
-    index = 0}) {
+Widget appOnboardingPage(
+  PageController controller, {
+  String imagPath = 'assets/images/1.png',
+  String title = '',
+  String subttile = '',
+  index = 0,
+  dynamic context = 0,
+}) {
   return Column(
     children: [
       Image.asset(
@@ -22,7 +26,10 @@ Widget appOnboardingPage(PageController controller,
         padding: const EdgeInsets.only(left: 30, right: 30),
         child: text16Normal(text: subttile),
       ),
-      nextButton(index, controller),
+      nextButton(
+        index,
+        controller,
+      ),
     ],
   );
 }
@@ -37,7 +44,11 @@ Widget nextButton(int index, PageController _controller) {
           curve: Curves.ease,
         );
       } else {
-        return print('home page');
+        // Navigator.pushNamed(context, "SingIn");
+        // Navigator.push(
+        // context,
+        // MaterialPageRoute(builder: (context) =>  SingIn()),
+        // );
       }
     },
     child: Container(

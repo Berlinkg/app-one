@@ -1,5 +1,3 @@
-// import 'dart:math';
-
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -11,7 +9,7 @@ class Welcom extends ConsumerWidget {
   Welcom({super.key});
 
   final PageController _controller = PageController();
-
+  dynamic context;
   int dotsIndex = 0;
 
   @override
@@ -40,21 +38,30 @@ class Welcom extends ConsumerWidget {
                 controller: _controller,
                 scrollDirection: Axis.horizontal,
                 children: [
-                  appOnboardingPage(_controller,
-                      imagPath: "assets/images/4.png",
-                      title: "first page",
-                      subttile: 'subtitle in e first page ',
-                      index: 1),
-                  appOnboardingPage(_controller,
-                      imagPath: "assets/images/5.png",
-                      title: 'secondpage',
-                      subttile: 'sub titile secon in a secon page',
-                      index: 2),
-                  appOnboardingPage(_controller,
-                      imagPath: "assets/images/5.png",
-                      title: 'third page',
-                      subttile: 'subtitle in ea third page',
-                      index: 3)
+                  appOnboardingPage(
+                    _controller,
+                    imagPath: "assets/images/4.png",
+                    title: "first page",
+                    subttile: 'subtitle in e first page ',
+                    index: 1,
+                    context: context,
+                  ),
+                  appOnboardingPage(
+                    _controller,
+                    imagPath: "assets/images/5.png",
+                    title: 'secondpage',
+                    subttile: 'sub titile secon in a secon page',
+                    index: 2,
+                    context: context,
+                  ),
+                  appOnboardingPage(
+                    _controller,
+                    imagPath: "assets/images/5.png",
+                    title: 'third page',
+                    subttile: 'subtitle in ea third page',
+                    index: 3,
+                    context: context,
+                  )
                 ],
               ),
               //our three pages
