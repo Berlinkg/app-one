@@ -7,3 +7,14 @@ BoxDecoration appBoxShadou() {
     borderRadius: BorderRadius.circular(15),
   );
 }
+
+BoxDecoration appBoxDEcorationTextFiled({
+  Color color = AppColors.primarySecondaryBackground,
+  double radius = 15,
+  Color bordercolor = AppColors.primaryFourElementText,
+}) {
+  return BoxDecoration(
+      color: color,
+      borderRadius: BorderRadius.circular(radius),
+      border: Border.all(color: bordercolor));
+}

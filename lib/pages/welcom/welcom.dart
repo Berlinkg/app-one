@@ -9,7 +9,7 @@ class Welcom extends ConsumerWidget {
   Welcom({super.key});
 
   final PageController _controller = PageController();
-  dynamic context;
+  // dynamic context;
   int dotsIndex = 0;
 
   @override

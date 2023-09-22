@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app_2/common/widgets/app_shadou.dart';
 import 'package:shop_app_2/common/widgets/text_widgets.dart';
+import 'package:shop_app_2/pages/sing/sinng_in.dart';
 // import 'package:shop_app_2/pages/sing/sinng_in.dart';
 
 Widget appOnboardingPage(
@@ -9,7 +10,8 @@ Widget appOnboardingPage(
   String title = '',
   String subttile = '',
   index = 0,
-  dynamic context = 0,
+  context,
+  // ?dynamic context = 0,
 }) {
   return Column(
     children: [
@@ -26,15 +28,12 @@ Widget appOnboardingPage(
         padding: const EdgeInsets.only(left: 30, right: 30),
         child: text16Normal(text: subttile),
       ),
-      nextButton(
-        index,
-        controller,
-      ),
+      nextButton(index, controller, context),
     ],
   );
 }
 
-Widget nextButton(int index, PageController _controller) {
+Widget nextButton(int index, PageController _controller, BuildContext context) {
   return GestureDetector(
     onTap: () {
       if (index < 3) {
@@ -44,10 +43,10 @@ Widget nextButton(int index, PageController _controller) {
           curve: Curves.ease,
         );
       } else {
-        // Navigator.pushNamed(context, "SingIn");
+        Navigator.pushNamed(context, "/singIn");
         // Navigator.push(
         // context,
-        // MaterialPageRoute(builder: (context) =>  SingIn()),
+        // MaterialPageRoute(builder: (context) => const  SingIn()),
         // );
       }
     },
