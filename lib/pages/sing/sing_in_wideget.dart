@@ -46,13 +46,18 @@ Widget _loginButton(
 Widget appTextFile(
     {String text = '',
     String iconName = '',
-    String hinText = "type your name"}) {
+    String hinText = "type your adress",
+    bool obscureText = false}) {
   return Container(
-    padding: const EdgeInsets.only(left: 25, right: 22),
+    padding: const EdgeInsets.only(left: 20, right: 22),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         text14Normal(text: text),
+        //Emaidyn razmerin karait /choiot
+        const SizedBox(
+          height: 10,
+        ),
         Container(
           width: 325,
           height: 50,
@@ -65,15 +70,30 @@ Widget appTextFile(
                 child: appImage(imagePath: iconName),
               ),
               //our tex filed Davai rabotai
-              //azyr kelet meniki/anan oshentyp menda yirotom
-              // sen bashka nerseni uirot komptu bashyna urasynby
-              // konechno
               Container(
                 width: 270,
                 height: 30,
                 child: TextField(
                   keyboardType: TextInputType.multiline,
-                  decoration: InputDecoration(hintText: hinText),
+                  decoration: InputDecoration(
+                    hintText: hinText,
+                    border: const OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.transparent),
+                    ),
+                    enabledBorder: const OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.transparent),
+                    ),
+                    focusedBorder: const OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.transparent),
+                    ),
+                    disabledBorder: const OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.transparent),
+                    ),
+                  ),
+                  onChanged: (value) {},
+                  maxLines: 1,
+                  autocorrect: false,
+                  obscureText: obscureText,
                 ),
               )
             ],

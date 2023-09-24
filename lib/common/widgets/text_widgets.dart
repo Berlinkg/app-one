@@ -29,3 +29,18 @@ Widget text14Normal(
     style: TextStyle(color: color, fontSize: 14, fontWeight: FontWeight.normal),
   );
 }
+
+Widget textAnderlinText({String text = "Your text"}) {
+  return GestureDetector(
+    onTap: () {},
+    child: Text(
+      text,
+      style: const TextStyle(
+          fontSize: 14,
+          fontWeight: FontWeight.normal,
+          color: AppColors.primaryText,
+          decoration: TextDecoration.underline,
+          decorationColor: AppColors.primaryText),
+    ),
+  );
+}

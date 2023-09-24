@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app_2/common/widgets/button_widgets.dart';
 import 'package:shop_app_2/common/widgets/text_widgets.dart';
 import 'package:shop_app_2/pages/sing/sing_in_wideget.dart';
 
@@ -22,12 +23,29 @@ class SingIn extends StatelessWidget {
                   const SizedBox(
                     height: 50,
                   ),
-                  appTextFile(text: "Email", iconName: "assets/images/use.png"),
+                  appTextFile(
+                      text: "Email",
+                      iconName: "assets/images/use.png",
+                      hinText: 'your name '),
                   const SizedBox(
                     height: 20,
                   ),
                   appTextFile(
-                      text: "Pasword", iconName: "assets/images/loc.png"),
+                      text: "Pasword",
+                      iconName: "assets/images/loc.png",
+                      hinText: 'your pasword',
+                      obscureText: true),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                      margin:
+                          const EdgeInsets.only(left: 25, right: 20, top: 10),
+                      child: text14Normal(text: 'Forget your PAssword')),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  appButton(),
                 ],
               )),
         ));

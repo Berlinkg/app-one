@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app_2/common/widgets/app_shadou.dart';
 import 'package:shop_app_2/common/widgets/text_widgets.dart';
-import 'package:shop_app_2/pages/sing/sinng_in.dart';
+// import 'package:shop_app_2/pages/sing/sinng_in.dart';
 // import 'package:shop_app_2/pages/sing/sinng_in.dart';
 
 Widget appOnboardingPage(
