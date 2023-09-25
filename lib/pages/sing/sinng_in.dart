@@ -45,7 +45,11 @@ class SingIn extends StatelessWidget {
                   const SizedBox(
                     height: 50,
                   ),
-                  appButton(),
+                  Center(child: appButton(buttonName: "Login")),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  Center(child: appButton(buttonName: "Registor")),
                 ],
               )),
         ));
