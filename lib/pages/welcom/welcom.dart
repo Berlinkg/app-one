@@ -14,7 +14,8 @@ class Welcom extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    print('my dots index $dotsIndex');
+    //print
+    ('my dots index $dotsIndex');
     final index = ref.watch(indexProvider);
     return Container(
       color: Colors.white,
@@ -28,7 +29,8 @@ class Welcom extends ConsumerWidget {
               //our three pages
               PageView(
                 onPageChanged: (value) {
-                  print('your index is index $dotsIndex');
+                  // print
+                  ('your index is index $dotsIndex');
                   dotsIndex = value;
                   ref.read(indexProvider.notifier).state = value;
                   // setState(() {

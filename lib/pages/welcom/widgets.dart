@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app_2/common/widgets/app_shadou.dart';
 import 'package:shop_app_2/common/widgets/text_widgets.dart';
-// import 'package:shop_app_2/pages/sing/sinng_in.dart';
-// import 'package:shop_app_2/pages/sing/sinng_in.dart';
 
 Widget appOnboardingPage(
   PageController controller, {
@@ -51,12 +49,13 @@ Widget nextButton(int index, PageController _controller, BuildContext context) {
       }
     },
     child: Container(
-        width: 325,
-        height: 50,
-        margin: const EdgeInsets.only(top: 100, left: 25, right: 25),
-        decoration: appBoxShadou(),
-        child: Center(
-          child: text16Normal(text: 'next', color: Colors.white),
-        )),
+      width: 325,
+      height: 50,
+      margin: const EdgeInsets.only(top: 100, left: 25, right: 25),
+      decoration: appBoxShadou(),
+      child: Center(
+        child: text16Normal(text: 'next', color: Colors.white),
+      ),
+    ),
   );
 }
