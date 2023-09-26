@@ -3,14 +3,21 @@ import 'package:shop_app_2/common/utils/colors.dart';
 import 'package:shop_app_2/common/widgets/app_shadou.dart';
 import 'package:shop_app_2/common/widgets/text_widgets.dart';
 
-Widget appButton({
-  String buttonName = "",
-  double hight = 30,
-  double widht = 300,
-  bool isLogin = true,
-}) {
+Widget appButton(
+    {String buttonName = "",
+    double hight = 30,
+    double widht = 300,
+    bool isLogin = true,
+    BuildContext? context}) {
   return GestureDetector(
-    onTap: () {},
+    onTap: () {
+      Navigator.push(
+        context!,
+        MaterialPageRoute(
+          builder: (context) => const Scaffold(),
+        ),
+      );
+    },
     child: Container(
       //islogin true sen a primari element is not true send color white
       height: hight,

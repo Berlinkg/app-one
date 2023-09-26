@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:shop_app_2/pages/sing/sinng_in.dart';
+
+import 'package:shop_app_2/pages/sing_up/sinng_in.dart';
+
 import 'package:shop_app_2/pages/welcom/welcom.dart';
 
 void main() {
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
       initialRoute: "",
       routes: {
         "/": (context) => Welcom(),
-        "/singIn": (context) => const SingIn()
+        "/singIn": (context) => const SingUp()
       },
       // home: SingIn(),
     );
