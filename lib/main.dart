@@ -73,12 +73,13 @@ class MyHomePage extends ConsumerWidget {
             ),
             FloatingActionButton(
               heroTag: 'second',
+
               // onPressed: () {
               //   print(count.toString());
               //   ref.read(appCount.notifier).state++;
               // },
               // onPressed: MyFac,
-              onPressed: () => MyFac(),
+              // onPressed: () => MyFac(),
               tooltip: 'Increment',
               child: const Icon(Icons.add),
             ),
