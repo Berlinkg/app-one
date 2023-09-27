@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app_2/common/widgets/app_text_filed.dart';
 import 'package:shop_app_2/common/widgets/button_widgets.dart';
 import 'package:shop_app_2/common/widgets/text_widgets.dart';
-import 'package:shop_app_2/pages/sing/sing_in_wideget.dart';
-// import 'package:shop_app_2/pages/sing_in/widgets/chernbo_sing_in_wideget.dart';
+import 'package:shop_app_2/pages/sing_in/widgets/sing_in_wideget.dart';
+
+import '../../common/widgets/app_bar.dart';
 
 class SingUp extends StatelessWidget {
   const SingUp({super.key});
@@ -21,7 +23,7 @@ class SingUp extends StatelessWidget {
               children: [
                 thirdPartyLogin(),
                 Center(
-                  child: text14Normal(text: 'just ecample juast example'),
+                  child: text14Normal(text: 'Entor ypur email & free one'),
                 ),
                 const SizedBox(
                   height: 50,

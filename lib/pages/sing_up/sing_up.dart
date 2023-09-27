@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app_2/common/widgets/app_bar.dart';
+import 'package:shop_app_2/common/widgets/app_text_filed.dart';
 import 'package:shop_app_2/common/widgets/button_widgets.dart';
 import 'package:shop_app_2/common/widgets/text_widgets.dart';
-import 'package:shop_app_2/pages/sing/sing_in_wideget.dart';
-//import 'package:shop_app_2/pages/sing_in/widgets/chernbo_sing_in_wideget.dart';
+import 'package:shop_app_2/pages/sing_in/widgets/sing_in_wideget.dart';
 
-class SingIn extends StatelessWidget {
-  const SingIn({super.key});
+class SingUps extends StatelessWidget {
+  const SingUps({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,49 +20,60 @@ class SingIn extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                thirdPartyLogin(),
+                // thirdPartyLogin(),
+                const SizedBox(
+                  height: 30,
+                ),
                 Center(
-                  child: text14Normal(text: 'just ecample juast example'),
+                  child: text14Normal(text: 'enter your email free omes'),
                 ),
                 const SizedBox(
-                  height: 50,
+                  height: 20,
+                ),
+                appTextFile(
+                    text: "User name",
+                    iconName: "assets/images/use.png",
+                    hinText: 'Enter your name '),
+                const SizedBox(
+                  height: 20,
                 ),
                 appTextFile(
                     text: "Email",
                     iconName: "assets/images/use.png",
-                    hinText: 'your name '),
+                    hinText: 'Enter your email address'),
                 const SizedBox(
                   height: 20,
                 ),
                 appTextFile(
                     text: "Pasword",
                     iconName: "assets/images/loc.png",
-                    hinText: 'your pasword',
+                    hinText: 'Enter your password ',
+                    obscureText: true),
+                const SizedBox(
+                  height: 20,
+                ),
+                appTextFile(
+                    text: "Confirm your pasword",
+                    iconName: "assets/images/loc.png",
+                    hinText: 'Enter your confirm pasword',
                     obscureText: true),
                 const SizedBox(
                   height: 20,
                 ),
                 Container(
                     margin: const EdgeInsets.only(left: 25, right: 20, top: 10),
-                    child: text14Normal(text: 'Forget your Password')),
+                    child: text14Normal(text: "By creating any acount ")),
                 const SizedBox(
-                  height: 50,
+                  height: 20,
                 ),
                 Center(
                   child: appButton(
-                    buttonName: "Login",
+                    buttonName: "Registor",
                   ),
                 ),
                 const SizedBox(
-                  height: 15,
-                ),
-                Center(
-                  child: appButton(
-                    buttonName: "Sing Up",
-                    isLogin: true,
-                    context: context,
-                  ),
-                ),
+                  height: 30,
+                )
               ],
             ),
           ),

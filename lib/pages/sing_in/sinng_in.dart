@@ -1,7 +1,9 @@
 // import 'package:flutter/material.dart';
+// import 'package:shop_app_2/common/widgets/app_bar.dart';
+// import 'package:shop_app_2/common/widgets/app_text_filed.dart';
 // import 'package:shop_app_2/common/widgets/button_widgets.dart';
 // import 'package:shop_app_2/common/widgets/text_widgets.dart';
-// import 'package:shop_app_2/pages/sing/sing_in_wideget.dart';
+// import 'package:shop_app_2/pages/sing_in/widgets/sing_in_wideget.dart';
 
 // class SingIn extends StatelessWidget {
 //   const SingIn({super.key});
@@ -54,7 +56,6 @@
 //                     child: appButton(
 //                   buttonName: "Sing Up",
 //                   isLogin: true,
-                  
 //                 )),
 //               ],
 //             ),
