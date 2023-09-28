@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
+import 'package:shop_app_2/pages/sing_up/sing_in.dart';
 import 'package:shop_app_2/pages/sing_up/sinng_up.dart';
-
 import 'package:shop_app_2/pages/welcom/welcom.dart';
 
 void main() {
@@ -23,8 +22,9 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: "",
       routes: {
-        "/": (context) => const MyHomePage(),
-        "/singIn": (context) => const SingUp()
+        "/": (context) => Welcom(),
+        "/singIn": (context) => const SingUp(),
+        "/registor": (context) => const SingIn(),
       },
       // home: SingIn(),
     );
@@ -64,21 +64,18 @@ class MyHomePage extends ConsumerWidget {
           children: [
             FloatingActionButton(
               heroTag: 'one',
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => const SecondPage()));
-              },
+              onPressed: () => navRoute(context),
               tooltip: 'Increment',
               child: const Icon(Icons.arrow_back_ios),
             ),
-            FloatingActionButton(
+            const FloatingActionButton(
               heroTag: 'second',
-
+              //  onPressed:()=>ref.read(appCount.notifier).state++,
               // onPressed: () {
               //   print(count.toString());
               //   ref.read(appCount.notifier).state++;
               // },
-              // onPressed: MyFac,
+              onPressed: MyFac,
               // onPressed: () => MyFac(),
               tooltip: 'Increment',
               child: const Icon(Icons.add),
@@ -89,7 +86,12 @@ class MyHomePage extends ConsumerWidget {
 }
 
 void MyFac() {
-  print("hello");
+  print(appCount);
+}
+
+void navRoute(BuildContext context) {
+  Navigator.of(context).push(
+      MaterialPageRoute(builder: (BuildContext context) => const SecondPage()));
 }
 
 class SecondPage extends StatelessWidget {

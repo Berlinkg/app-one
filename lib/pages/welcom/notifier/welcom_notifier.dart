@@ -1,12 +1,15 @@
-// import 'package:flutter/widgets.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'welcom_notifier.g.dart';
 
-// @riverpod
+@riverpod
 class IndexDot extends _$IndexDot {
   @override
   int build() {
     return 0;
   }
+}
+
+void changeIndex(int value) {
+   state = value;
 }

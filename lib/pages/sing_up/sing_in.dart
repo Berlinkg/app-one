@@ -3,10 +3,9 @@ import 'package:shop_app_2/common/widgets/app_bar.dart';
 import 'package:shop_app_2/common/widgets/app_text_filed.dart';
 import 'package:shop_app_2/common/widgets/button_widgets.dart';
 import 'package:shop_app_2/common/widgets/text_widgets.dart';
-import 'package:shop_app_2/pages/sing_in/widgets/sing_in_wideget.dart';
 
-class SingUps extends StatelessWidget {
-  const SingUps({super.key});
+class SingIn extends StatelessWidget {
+  const SingIn({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -69,6 +68,11 @@ class SingUps extends StatelessWidget {
                 Center(
                   child: appButton(
                     buttonName: "Registor",
+                    isLogin: false,
+                    context: context,
+                    // func: () {
+                    //   print("registor");
+                    // },
                   ),
                 ),
                 const SizedBox(

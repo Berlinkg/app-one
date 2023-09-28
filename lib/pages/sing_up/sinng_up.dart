@@ -8,6 +8,9 @@ import '../../common/widgets/app_bar.dart';
 
 class SingUp extends StatelessWidget {
   const SingUp({super.key});
+  // void myAppReg() {
+  //   print('register');
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -62,6 +65,7 @@ class SingUp extends StatelessWidget {
                     buttonName: "Sing Up",
                     isLogin: true,
                     context: context,
+                    func: () => Navigator.pushNamed(context, "/registor"),
                   ),
                 ),
               ],
