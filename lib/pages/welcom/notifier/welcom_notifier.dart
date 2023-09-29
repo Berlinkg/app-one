@@ -10,6 +10,6 @@ class IndexDot extends _$IndexDot {
   }
 }
 
-void changeIndex(int value) {
+void changeIndex(int value,int state) {
    state = value;
 }

@@ -35,6 +35,7 @@ Widget appTextFile(
                 width: 270,
                 height: 30,
                 child: TextField(
+                  onChanged:(value)=>func!(value),
                   keyboardType: TextInputType.multiline,
                   decoration: InputDecoration(
                     hintText: hinText,
@@ -51,7 +52,7 @@ Widget appTextFile(
                       borderSide: BorderSide(color: Colors.transparent),
                     ),
                   ),
-                  onChanged: (value) {},
+                  // onChanged: (value) {},
                   maxLines: 1,
                   autocorrect: false,
                   obscureText: obscureText,

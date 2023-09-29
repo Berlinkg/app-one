@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shop_app_2/common/widgets/app_text_filed.dart';
 import 'package:shop_app_2/common/widgets/button_widgets.dart';
 import 'package:shop_app_2/common/widgets/text_widgets.dart';
 import 'package:shop_app_2/pages/sing_in/widgets/sing_in_wideget.dart';
-
+import 'package:shop_app_2/pages/sing_up/notifier/registor_notifier.dart';
 import '../../common/widgets/app_bar.dart';
 
-class SingUp extends StatelessWidget {
-  const SingUp({super.key});
-  // void myAppReg() {
-  //   print('register');
-  // }
+class SingUp extends ConsumerWidget {
+ const SingUp({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    dynamic regProvider = ref.watch();
     return Container(
       color: Colors.white,
       child: SafeArea(
@@ -34,7 +33,11 @@ class SingUp extends StatelessWidget {
                 appTextFile(
                     text: "Email",
                     iconName: "assets/images/use.png",
-                    hinText: 'your name '),
+                    hinText: 'your name ',
+                    func:(value){
+                      print("my Name");
+                    } 
+                    ),
                 const SizedBox(
                   height: 20,
                 ),
