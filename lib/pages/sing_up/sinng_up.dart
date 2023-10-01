@@ -37,6 +37,7 @@ class SingUp extends ConsumerWidget {
                     func:(value){
                       print("my Name");
                     } 
+
                     ),
                 const SizedBox(
                   height: 20,
