@@ -4,15 +4,16 @@ import 'package:shop_app_2/common/widgets/app_text_filed.dart';
 import 'package:shop_app_2/common/widgets/button_widgets.dart';
 import 'package:shop_app_2/common/widgets/text_widgets.dart';
 import 'package:shop_app_2/pages/sing_in/widgets/sing_in_wideget.dart';
-import 'package:shop_app_2/pages/sing_up/notifier/registor_notifier.dart';
 import '../../common/widgets/app_bar.dart';
 
 class SingUp extends ConsumerWidget {
- const SingUp({Key? key}) : super(key: key);
+  const SingUp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    dynamic regProvider = ref.watch();
+    //we have mistake hear
+    ///we need to  improve
+    dynamic regProvider = ref.watch(Provider((ref) => null));
     return Container(
       color: Colors.white,
       child: SafeArea(
@@ -34,11 +35,10 @@ class SingUp extends ConsumerWidget {
                     text: "Email",
                     iconName: "assets/images/use.png",
                     hinText: 'your name ',
-                    func:(value){
+                    // value
+                    func: (value) {
                       print("my Name");
-                    } 
-
-                    ),
+                    }),
                 const SizedBox(
                   height: 20,
                 ),

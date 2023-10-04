@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shop_app_2/common/widgets/app_shadou.dart';
 import 'package:shop_app_2/common/widgets/image_widget.dart';
@@ -8,7 +7,8 @@ Widget appTextFile(
     {String text = '',
     String iconName = '',
     String hinText = "type your adress",
-    bool obscureText = false}) {
+    bool obscureText = false,
+    void Function(String value)? func}) {
   return Container(
     padding: const EdgeInsets.only(left: 20, right: 22),
     child: Column(
@@ -35,7 +35,8 @@ Widget appTextFile(
                 width: 270,
                 height: 30,
                 child: TextField(
-                  onChanged:(value)=>func!(value),
+                  // value
+                  onChanged: (value) => func!(value),
                   keyboardType: TextInputType.multiline,
                   decoration: InputDecoration(
                     hintText: hinText,
