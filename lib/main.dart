@@ -59,6 +59,7 @@ class MyHomePage extends ConsumerWidget {
             ],
           ),
         ),
+        
         floatingActionButton: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -75,18 +76,20 @@ class MyHomePage extends ConsumerWidget {
               //   print(count.toString());
               //   ref.read(appCount.notifier).state++;
               // },
-              onPressed: MyFac,
+              onPressed: myFac,
               // onPressed: () => MyFac(),
               tooltip: 'Increment',
-              child: const Icon(Icons.add),
+              child:  Icon(Icons.add),
             ),
           ],
         ));
   }
 }
 
-void MyFac() {
-  print(appCount);
+void myFac() {
+  //print
+  (appCount);
+
 }
 
 void navRoute(BuildContext context) {

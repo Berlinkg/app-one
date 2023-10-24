@@ -8,7 +8,8 @@ final dotsIndex = AutoDisposeNotifierProvider<IndexDot, int>.internal(
   IndexDot.new,
   name: r'indexDotProvider',
   debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$indexDotHash,
+      const bool.fromEnvironment('dart.vm.product') ? 
+      null : _$indexDotHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
