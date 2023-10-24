@@ -14,7 +14,7 @@ class SingUp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     //we have mistake hear
     ///we need to  improve
-    dynamic regProvider = ref.watch(Provider((ref) => null));
+     dynamic regProvider = ref.watch(Provider((ref) => null));
     return Container(
       color: Colors.white,
       child: SafeArea(

@@ -4,6 +4,7 @@ part of 'welcom_notifier.dart';
 String _$indexDotHash() => r'e995707d5f94452e5bee568aac0667da64';
 //  IndexDot
 //  @dotsIndex(IndexDot)
+ 
 final dotsIndex = AutoDisposeNotifierProvider<IndexDot, int>.internal(
   IndexDot.new,
   name: r'indexDotProvider',

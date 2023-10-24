@@ -31,7 +31,7 @@ Widget appTextFile(
                 child: appImage(imagePath: iconName),
               ),
               //our tex filed Davai rabotai
-              Container(
+              SizedBox(
                 width: 270,
                 height: 30,
                 child: TextField(
