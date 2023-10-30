@@ -4,16 +4,17 @@ import 'package:shop_app_2/common/widgets/app_text_filed.dart';
 import 'package:shop_app_2/common/widgets/button_widgets.dart';
 import 'package:shop_app_2/common/widgets/text_widgets.dart';
 
+
 class SingIn extends StatelessWidget {
   const SingIn({super.key});
-
+//!bul akirki sing up page adaspa
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
       child: SafeArea(
         child: Scaffold(
-          appBar: buildAppBar(),
+          appBar: buildAppBar(title: "Sing Up"),
           backgroundColor: Colors.white,
           body: SingleChildScrollView(
             child: Column(
@@ -29,17 +30,24 @@ class SingIn extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                appTextFile(
+                  appTextFile(
                     text: "User name",
                     iconName: "assets/images/use.png",
-                    hinText: 'Enter your name '),
+                    hinText: 'Enter your name ',
+                    // obscureText: true,
+                    func: (value) =>(value)
+                     
+                    ),
                 const SizedBox(
                   height: 20,
                 ),
-                appTextFile(
-                    text: "Email",
+                  appTextFile(
+                    text: "Enter your email",
                     iconName: "assets/images/use.png",
-                    hinText: 'Enter your email address'),
+                    hinText: 'Enter your email adres ',
+                    func: (value) =>(value)
+                     
+                    ), 
                 const SizedBox(
                   height: 20,
                 ),
@@ -47,7 +55,11 @@ class SingIn extends StatelessWidget {
                     text: "Pasword",
                     iconName: "assets/images/loc.png",
                     hinText: 'Enter your password ',
-                    obscureText: true),
+                    obscureText: true,
+                    func: (value) =>(value)
+                    // ref.read(registorNotifierProvider.notifier).onUserNameChange(value),
+                     
+                    ),
                 const SizedBox(
                   height: 20,
                 ),
@@ -70,9 +82,9 @@ class SingIn extends StatelessWidget {
                     buttonName: "Registor",
                     isLogin: false,
                     context: context,
-                    // func: () {
-                    //   print("registor");
-                    // },
+                    func: () {
+                      print("registor");
+                    },
                   ),
                 ),
                 const SizedBox(

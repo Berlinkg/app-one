@@ -7,6 +7,7 @@ Widget appTextFile(
     {String text = '',
     String iconName = '',
     String hinText = "type your adress",
+
     bool obscureText = false,
     void Function(String value)? func}) {
   return Container(
@@ -36,7 +37,7 @@ Widget appTextFile(
                 height: 30,
                 child: TextField(
                   // value
-                  onChanged: (value) => func!(value),
+                 // onChanged: (value)=> func!(value),
                   keyboardType: TextInputType.multiline,
                   decoration: InputDecoration(
                     hintText: hinText,
@@ -53,7 +54,7 @@ Widget appTextFile(
                       borderSide: BorderSide(color: Colors.transparent),
                     ),
                   ),
-                  // onChanged: (value) {},
+                onChanged: (value) {},
                   maxLines: 1,
                   autocorrect: false,
                   obscureText: obscureText,

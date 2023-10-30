@@ -3,7 +3,7 @@ import 'package:shop_app_2/common/widgets/text_widgets.dart';
 
 import '../utils/colors.dart';
 
-AppBar buildAppBar() {
+AppBar buildAppBar({String title=""}) {
   return AppBar(
     bottom: PreferredSize(
       preferredSize: const Size.fromHeight(1),
@@ -12,6 +12,6 @@ AppBar buildAppBar() {
         height: 1,
       ),
     ),
-    title: text16Normal(text: "Login", color: AppColors.primaryText),
+    title: text16Normal(text: title, color: AppColors.primaryText),
   );
 }
