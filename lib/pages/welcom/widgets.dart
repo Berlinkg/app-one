@@ -4,12 +4,11 @@ import 'package:shop_app_2/common/widgets/text_widgets.dart';
 
 Widget appOnboardingPage(
   PageController controller, {
-  String imagPath = 'assets/images/1.png',
+  String imagPath = '',
   String title = '',
   String subttile = '',
   index = 0,
   context,
-  // ?dynamic context = 0,
 }) {
   return Column(
     children: [
@@ -31,11 +30,11 @@ Widget appOnboardingPage(
   );
 }
 
-Widget nextButton(int index, PageController _controller, BuildContext context) {
+Widget nextButton(int index, PageController controller, BuildContext context) {
   return GestureDetector(
     onTap: () {
       if (index < 3) {
-        _controller.animateToPage(
+        controller.animateToPage(
           index,
           duration: const Duration(milliseconds: 300),
           curve: Curves.ease,

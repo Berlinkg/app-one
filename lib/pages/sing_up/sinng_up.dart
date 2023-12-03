@@ -12,10 +12,7 @@ class SingUp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    //we have mistake hear
-    ///we need to  improve
-    dynamic regProvider=ref.watch(registorNotifierProvider.notifier);
-    // dynamic regProvider = ref.watch(Provider((ref) => null));
+    dynamic regProvider = ref.watch(registorNotifierProvider.notifier);
     return Container(
       color: Colors.white,
       child: SafeArea(
@@ -75,7 +72,7 @@ class SingUp extends ConsumerWidget {
                     buttonName: "Sing Up",
                     isLogin: true,
                     context: context,
-                   // func: (value)=>ref.read(registorNotifierProvider.notifier).onUserEmailChange(value),
+                    // func: (value)=>ref.read(registorNotifierProvider.notifier).onUserEmailChange(value),
                     func: () => Navigator.pushNamed(context, "/registor"),
                   ),
                 ),

@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -59,7 +60,6 @@ class MyHomePage extends ConsumerWidget {
             ],
           ),
         ),
-        
         floatingActionButton: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -79,7 +79,7 @@ class MyHomePage extends ConsumerWidget {
               onPressed: myFac,
               // onPressed: () => MyFac(),
               tooltip: 'Increment',
-              child:  Icon(Icons.add),
+              child: Icon(Icons.add),
             ),
           ],
         ));
@@ -89,7 +89,6 @@ class MyHomePage extends ConsumerWidget {
 void myFac() {
   //print
   (appCount);
-
 }
 
 void navRoute(BuildContext context) {
